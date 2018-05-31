@@ -23,9 +23,9 @@ class RankingController extends AppController
        //SELECT food_id, SUM(score) FROM  comments GROUP BY food_id DESC;
       
        $query = $this->Comment->find()->contain('Foods');
-       $scores = $query->select(['id','food_id','avg'=> $query->func()->avg('score'),'Foods.name'])
+       $scores = $query->select(['id','food_id','avg'=> $query->func()->avg('score'),'Foods.name','Foods.imgURL','Foods.title'])
        ->order(['avg' => 'DESC'])
-       ->limit(5)
+       ->limit(10)
        ->group(['food_id'])
        ->all();
        $this->set(compact('scores',$scores));

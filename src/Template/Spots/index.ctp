@@ -5,20 +5,50 @@
  */
 ?>
 <div class="container-fluid">
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+　<?php echo $this->Html->css('style') ?>    
+<ul class="side-nav">
+        <!--home画面-->
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"data-toggle="collapse"data-target="#navbarEexample8">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="/">
+		    <img alt="北関東グルメランキング" src="/webroot/img/北関東.jpg">
+			</a>
+		</div>
+		
+		<div class="collapse navbar-collapse" id="navbarEexample8">
+			<ul class="nav navbar-nav navbar-right">
+			 <li role="presentation" class="active"><?= $this->Html->link(__('ホーム'), ['controller'=>'Ranking', 'action'=>'index']) ?></li>
+            <li role="presentation"><?= $this->Html->link(__('北関東グルメとは'), ['controller' => 'information', 'action' =>'index']) ?></li>
+           <li role="presentation"><?= $this->Html->link(__('観光一覧'), ['controller' => 'spots', 'action' => 'index'])?></li>
+           <li role="presentation"><?= $this->Html->link(__('コメント投稿'), ['controller' => 'comments', 'action' => 'add']) ?></li>
+          <li role="presentation"><?= $this->Html->link(__('ログアウト'), ['controller'=>'users','action' =>'logout']) ?></li>	
+			</ul>
+		</div>
+	</div>
+	</nav>    
+<nav class="col-md-5" id="actions-sidebar">
     <ul class="side-nav">
     </ul>
 </nav>
-          <p><?=$this->Html->link(__('戻る'),['controller'=>'','action'=>'index'])?></li></p>     
+ <br>
+ <br>
+ <br>
 <div class="container-fluid">
     <h1><span class="label label-warning"><?= __('観光スポット一覧表') ?></span></h1>
  </div>
 <div class="form-group form-group-lg">
-  <section class="col-md-3 col-sm-6">
+  <section class=" col-md-4">
        <div class="row">
            </div>
       </section>
-       <div class="col-sm-9">
+       <div class="col-md-4">
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>
@@ -35,16 +65,33 @@
     </table>
     <div class="container-fluid">
     <div class="paginator">
-        <ul class="pagination">
+         <nav>
+        <ul class="pagination pagination-sm">
             <?= $this->Paginator->first('<< ' . __('最初')) ?>
             <?= $this->Paginator->prev('< ' . __('前に')) ?>
-            <?= $this->Paginator->numbers() ?>
             <?= $this->Paginator->next(__('次へ') . ' >') ?>
             <?= $this->Paginator->last(__('最後') . ' >>') ?>
         </ul>
-        <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
+        </nav>
         </div>
       </div>
      </div>
     </div>
  </div>
+ <footer>
+    <div class="text-center">
+    <div class="container">
+     <div class="footer-menu">
+         <nav>
+             <ul>
+                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
+                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
+             </ul>
+         </nav>
+         <hr>
+        <div class="copyright">
+             <small>copyrights.@北関東グルメAll rights reserved.</small>
+        </div> 
+      </div>
+      </div>
+    </footer>

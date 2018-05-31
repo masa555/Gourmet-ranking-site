@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .star-rating {
   position: relative;
   width: 5em;
@@ -5,6 +6,8 @@
   font-size: 25px;
 
 }
+
+/*星のレーディング*/
 .star-rating-front {
   position: absolute;
   top: 0;
@@ -15,10 +18,101 @@
 .star-rating-back {
   color: #ccc;
 }
-.wrap-rate-rate3{
-  content:'★★★';
+.rate {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 16px;
+  font-size: 20px;
+}
+.rate:before, .rate:after {
+  position:absolute;
+  top: 0;
+  left: 0;
+  content: '★★★★★';
   display:inline-block;
-  overflow:hidden;
-  width:40px;
-  
+  height: 16px;
+  line-height: 16px;
+}
+.rate:before {
+  color: #ddd;
+}
+.rate:after {
+  color: #ffa500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.rate0:after {
+  width: 0;
+}
+
+.rate1:after {
+  width: 16px;
+}
+
+.rate1-5:after {
+  width: 25px;
+}
+
+.rate2:after {
+  width: 32px;
+}
+
+.rate2-5:after {
+  width: 40px;
+}
+
+.rate3:after {
+  width: 48px;
+}
+
+.rate3-5:after {
+  width: 56px;
+}
+
+.rate4:after {
+  width: 64px;
+}
+
+.rate4-5:after {
+  width: 72px;
+}
+
+.rate5:after {
+  width: 80px;
+}
+
+.wrap {
+  width: 80px;
+/*footerの設定*/  
+}
+footer{
+  padding-top:16px;
+  margin-top:45px;
+  line-height: 1.2;
+}
+.footer-menu ul{
+  list-style:none;
+}
+.footer-menu nav li{
+  display: inline-block;
+  padding:0 10px;
+  margin:0 auto;
+}
+.policy{
+  line-height: 1.428571429;
+  font-size:14px;
+}
+.policy h2{
+  font-size:20px;
+}
+.page_title{
+  font-size:25px;
+}
+.copyright{
+   text-align: center;
+}
+.paginator nav {
+  text-align: center;
 }

@@ -8,7 +8,7 @@
     <ul class="side-nav">
         <li class="heading"><?= __('') ?></li>
         <li><?= $this->Form->postLink(
-                __('削除'),
+                __('退会'),
                 ['action' => 'delete', $user->id],
                 ['confirm' => __('本当によろしいですか？ # {0}?', $user->id)]
             )

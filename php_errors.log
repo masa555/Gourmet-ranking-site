@@ -634,3 +634,15 @@ Stack trace:
 [07-May-2018 18:32:29 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 93
 [07-May-2018 18:52:02 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 121
 [07-May-2018 18:52:14 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 121
+[24-May-2018 11:59:47 Asia/Tokyo] PHP Fatal error:  Cannot use [] for reading in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 40
+[24-May-2018 15:13:59 Asia/Tokyo] PHP Parse error:  syntax error, unexpected 'endforeach' (T_ENDFOREACH) in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 99
+[24-May-2018 15:16:02 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 179
+[24-May-2018 15:31:55 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 178
+[24-May-2018 15:41:09 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 51
+[24-May-2018 15:46:10 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 185
+[24-May-2018 16:07:05 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 177
+[24-May-2018 16:14:33 Asia/Tokyo] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 176
+[27-May-2018 14:16:20 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '$food' (T_VARIABLE), expecting ']' in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 52
+[27-May-2018 14:16:21 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '$food' (T_VARIABLE), expecting ']' in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 52
+[27-May-2018 17:50:25 Asia/Tokyo] PHP Fatal error:  Only variables can be passed by reference in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 50
+[31-May-2018 02:25:30 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ']' in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 26

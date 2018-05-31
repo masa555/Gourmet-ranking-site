@@ -95,7 +95,7 @@ public function login()
                }else{
                     //新規の場合ユーザーデータ登録
                  if ($this->Users->save($user)) {
-                    $this->Flash->success(__('登録しました。'));
+                    $this->Flash->success(__('ご登録ありがとうございます。'));
                     return $this->redirect(['controller' => 'ranking','action' => 'index']);
                   };
                }
