@@ -7,6 +7,15 @@
 
 }
 
+.center-filud{
+  margin:20px auto;
+  padding:3px;
+}
+.img-responsive{
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
 /*星のレーディング*/
 .star-rating-front {
   position: absolute;
@@ -87,18 +96,30 @@
   width: 80px;
 /*footerの設定*/  
 }
-footer{
-  padding-top:16px;
-  margin-top:45px;
-  line-height: 1.2;
+/*contents*/
+
+.center-filud{
+  margin:0 auto 0 auto;
+  padding-left:15px;
+  padding-right:15px;
+  
 }
-.footer-menu ul{
-  list-style:none;
+/*ページネーション*/
+.paginator nav {
+ margin:0 auto;
+}
+footer{
+   padding: 12px 0 ;
+   font-size: 12px;
+  margin-top: auto;
+  background-color:#dfdfdf;
+   
 }
 .footer-menu nav li{
-  display: inline-block;
-  padding:0 10px;
-  margin:0 auto;
+  padding:0 20px 0 22px;
+   margin:0 auto ;
+ display:inline-block;
+ margin-top:30px;
 }
 .policy{
   line-height: 1.428571429;
@@ -112,7 +133,6 @@ footer{
 }
 .copyright{
    text-align: center;
+   padding:35px;
 }
-.paginator nav {
-  text-align: center;
-}
+

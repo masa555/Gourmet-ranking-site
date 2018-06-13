@@ -91,20 +91,3 @@
     </div>
  </div> 
 </div>
- <footer>
-    <div class="text-center">
-    <div class="container">
-     <div class="footer-menu">
-         <nav>
-             <ul>
-                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
-                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-             </ul>
-         </nav>
-         <hr>
-        <div class="copyright">
-            <small>copyrights.@北関東グルメAll rights reserved.</small>
-        </div> 
-      </div>
-      </div>
-    </footer>

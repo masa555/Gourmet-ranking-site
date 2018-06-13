@@ -3,6 +3,7 @@
 <!--nabvbaer-->
 <ul class="side-nav">
         <!--home画面-->
+            <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
 		<div class="navbar-header">
@@ -12,14 +13,13 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/">
+			<a class="navbar-brand" href="/.">
 		    <img alt="北関東グルメランキング" src="/webroot/img/北関東.jpg">
 			</a>
 		</div>
-		
 		<div class="collapse navbar-collapse" id="navbarEexample8">
 			<ul class="nav navbar-nav navbar-right">
-			 <li role="presentation" class="active"><?= $this->Html->link(__('ホーム'), ['controller'=>'Ranking', 'action'=>'index']) ?></li>
+			<li role="presentation" class="active"><?= $this->Html->link(__('ホーム'), ['controller'=>'Ranking', 'action'=>'index']) ?></li>
             <li role="presentation"><?= $this->Html->link(__('北関東グルメとは'), ['controller' => 'information', 'action' =>'index']) ?></li>
            <li role="presentation"><?= $this->Html->link(__('観光一覧'), ['controller' => 'spots', 'action' => 'index'])?></li>
            <li role="presentation"><?= $this->Html->link(__('コメント投稿'), ['controller' => 'comments', 'action' => 'add']) ?></li>
@@ -28,6 +28,7 @@
 		</div>
 	</div>
 	</nav>
+	
      <div class="center-filud">
      <!--ここまで-->
   　<!--CSSを記述-->
@@ -37,7 +38,7 @@
   　<br>
   　<?php echo $this->Html->css('style') ?>
   　<?php echo $this->Html->css('half-slider') ?>
-  　<h3>総合ランキング</h3>
+  　<h3>おすすめグルメランキング！</h3>
     <?php $rank=1;?>
     <?php foreach ($scores as $score):
     ?>      
@@ -56,7 +57,7 @@
         }?>
     </h2>
     <h1>
-      <?php echo $rank;
+      第<?php echo $rank;
          $rank=$rank+1;
         ?>位 
     </h1>
@@ -67,6 +68,7 @@
     <!--URL-->
     <h3><?=$this->Html->link ($score["food"]["name"],["controller"=>'Foods','action'=>'view',$score['food_id']]);?></h3>
     <!--文章-->
+     一押し！
     <h4><?=h($score["food"]["title"]);?></h4>
     <h3>おすすめ度</h3>
     <span class="rate rate<?= h($avg) ?>"></span>
@@ -80,26 +82,9 @@
   </div>
   
   <!--ループ文終了-->
-</div>
-<hr />
+  </div>
+  <hr>
  　　<?php endforeach; ?>
-    <footer>
-    <div class="text-center">
-    <div class="container">
-     <div class="footer-menu">
-         <nav>
-             <ul>
-                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
-                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-             </ul>
-         </nav>
-         <hr>
-        <div class="copyright">
-             <small>copyrights.@北関東グルメAll rights reserved.</small>
-        </div> 
-      </div>
-      </div>
-    </footer>
-    </div>
-    </div>
-   
+ 　<!--フッター-->　
+     </div>
+    　 </div>　  

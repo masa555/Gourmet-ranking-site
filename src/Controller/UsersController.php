@@ -1,6 +1,6 @@
 <?php
 namespace App\Controller;
-
+use Cake\Mailer\Email;
 use App\Controller\AppController;
 /**
  * Users Controller
@@ -10,7 +10,7 @@ use App\Controller\AppController;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
 class UsersController extends AppController
-{   
+{
     
 public function login()
 {
@@ -42,15 +42,20 @@ public function login()
      * @return \Cake\Http\Response|void
      */
     public function index()
-    {
+    { 
         
         $users = $this->paginate($this->Users);
 
         $this->set(compact('users'));
         
-        
+        print_r("okok<br><br><br><br><br><br><br><br>ok");
+         $email = new Email('default');
+        $email->from(['tyutyumasato@gmail.com' => '運営だよ'])
+              ->to('sales@fieroj.com')
+              ->subject('タイトル')
+              ->send('本文テスト！');
     }
-
+    
     /**
      * View method
      *
@@ -74,8 +79,7 @@ public function login()
      */
     public function add()
     {  
-        $user = $this->Users->newEntity();
-        
+         $user = $this->Users->newEntity();
         if ($this->request->is('post')) {
             //postデータをuserモデルに入れる
             $user = $this->Users->patchEntity($user,$this->request->getData());
@@ -94,6 +98,12 @@ public function login()
                    $this->render('confirm');
                }else{
                     //新規の場合ユーザーデータ登録
+                    /*メール設定*/
+                   $email = new Email('default');
+                 $email->from(['tyutyumasato@gmail.com' => 'kitakantou'])
+                 ->to('sukilup2058@gmail.com')
+                ->subject('仮登録')
+                ->send('ありがとうございます。こちらからご登録ください。');      
                  if ($this->Users->save($user)) {
                     $this->Flash->success(__('ご登録ありがとうございます。'));
                     return $this->redirect(['controller' => 'ranking','action' => 'index']);
@@ -111,7 +121,7 @@ public function login()
         
          $this->set(compact('user'));
     }
-        
+    
     /**
      * Edit method
      *
@@ -149,7 +159,7 @@ public function delete($id = null)
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
         if ($this->Users->delete($user)) {
-            $this->Flash->success(__('すでに削除してあります。'));
+            $this->Flash->success(__('削除しました。'));
         } else {
             $this->Flash->error(__('削除できません'));
         }
@@ -161,6 +171,5 @@ public function delete($id = null)
         parent::initialize();
         $this->Auth->allow(['logout','add']);
     }
-    
 }
 

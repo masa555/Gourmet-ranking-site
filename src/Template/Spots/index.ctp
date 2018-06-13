@@ -40,9 +40,8 @@
  <br>
  <br>
  <br>
-<div class="container-fluid">
+<div class="container-filud">
     <h1><span class="label label-warning"><?= __('観光スポット一覧表') ?></span></h1>
- </div>
 <div class="form-group form-group-lg">
   <section class=" col-md-4">
        <div class="row">
@@ -78,20 +77,5 @@
      </div>
     </div>
  </div>
- <footer>
-    <div class="text-center">
-    <div class="container">
-     <div class="footer-menu">
-         <nav>
-             <ul>
-                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
-                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-             </ul>
-         </nav>
-         <hr>
-        <div class="copyright">
-             <small>copyrights.@北関東グルメAll rights reserved.</small>
-        </div> 
-      </div>
-      </div>
-    </footer>
+ </div>
+ 

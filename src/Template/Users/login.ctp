@@ -35,7 +35,8 @@
 	<br>
 	<br>
 	 <div class="text-center">
-	     <h1>北関東グルメランキングへようこそ！</h1> 
+	     
+	     <p>ようこそ！お越しくださいました！</p>
 	 </div>
      <div class="text-right">
 <?=$this->Html->link(__('新規登録はこちらから'),['controller'=>'users','action'=>'add'])?>
@@ -58,27 +59,10 @@
   array('div'=>'form-group',
   'class'=>'center-block btn-success btn-lg  active',
   )); ?>
- 
 <?= $this->Form->end() ?>
   </div>
  </div>
  </div>
- <footer>
-    <div class="text-center">
-    <div class="container">
-     <div class="footer-menu">
-         <nav>
-             <ul>
-                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
-                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-             </ul>
-         </nav>
-         <hr>
-        <div class="copyright">
-            <small>copyrights.@北関東グルメAll rights reserved.</small>
-        </div> 
-      </div>
-      </div>
-    </footer> 
 </body>
+
 

@@ -36,7 +36,7 @@
 	<br>
 	<br>
 	<br>
-      <?=  $this->Html->image($spot->imgURL,
+      <?=$this->Html->img($spot->imgURL,
                      array('width'=>'500','height'=>'266', ['alt' => '北関東']))?></td>
       <div class="row">
         <h1><span class="label label-info"><?=('おすすめ!!スポット') ?></span></h1>
@@ -57,20 +57,4 @@
             </div>
            </div>
           </div>
-           <footer>
-    <div class="text-center">
-    <div class="container">
-     <div class="footer-menu">
-         <nav>
-             <ul>
-                  <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
-                  <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-             </ul>
-         </nav>
-         <hr>
-        <div class="copyright">
-             <small>copyrights.@北関東グルメAll rights reserved.</small>
-        </div> 
-      </div>
-      </div>
-    </footer>
+         
