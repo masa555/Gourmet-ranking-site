@@ -648,3 +648,35 @@ Stack trace:
 [31-May-2018 02:25:30 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '$user' (T_VARIABLE), expecting ']' in /home/ubuntu/workspace/my_app_name/src/Template/Ranking/index.ctp on line 26
 [05-Jun-2018 16:45:25 Asia/Tokyo] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ',' or ';' in /home/ubuntu/workspace/my_app_name/src/Template/Information/index.ctp on line 36
 [13-Jun-2018 18:46:21 Asia/Tokyo] PHP Fatal error:  Class 'Token\Util\Token' not found in /home/ubuntu/workspace/my_app_name/src/Controller/UsersController.php on line 109
+[25-Jun-2018 14:51:48 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 14:52:03 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 14:52:23 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 14:53:00 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 14:54:04 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 14:58:17 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 15:03:03 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 15:06:39 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 16:15:15 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 18
+[25-Jun-2018 16:17:06 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[25-Jun-2018 16:25:59 Asia/Tokyo] PHP Fatal error:  Trait 'TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[25-Jun-2018 16:30:10 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[25-Jun-2018 16:30:38 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[25-Jun-2018 16:32:56 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 20
+[25-Jun-2018 16:34:20 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 20
+[25-Jun-2018 16:35:52 Asia/Tokyo] PHP Fatal error:  Trait 'TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 20
+[25-Jun-2018 16:35:59 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 20
+[26-Jun-2018 10:30:31 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 20
+[26-Jun-2018 10:32:58 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:40:53 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:41:01 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:42:16 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:42:21 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:46:15 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:49:55 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:51:46 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:52:26 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:56:05 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:57:29 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 10:58:08 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[26-Jun-2018 11:19:36 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[30-Jun-2018 20:09:07 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19

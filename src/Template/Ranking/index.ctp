@@ -75,7 +75,7 @@
   </div>
   <div class="col-md-6">
     <!--画像-->
-    <div class="img-responsive img-thumbnail"><?=$this->html->image($score["food"]["imgURL"],array("width"=>'350',"height"=>"200","class"=>"img-responsive",
+    <div class="img-responsive thumbnail"><?=$this->html->image($score["food"]["imgURL"],array("width"=>'350',"height"=>"200","class"=>"img-responsive",
           ["alt"=>"北関東"]))?>
       <br>
     </div>

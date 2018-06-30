@@ -2,6 +2,7 @@
 namespace App\Controller;
 use Cake\Mailer\Email;
 use App\Controller\AppController;
+use Cake\Mailer\MailerAwareTrait;
 /**
  * Users Controller
  *
@@ -9,9 +10,37 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
+ 
 class UsersController extends AppController
 {
+    use MailerAwareTrait;
+ /*新規登録の処理をするメソッド作成*/   
+public function ragistration()
+{
+    $user =$this->Users->newEntity();
+    if($this->request->is('post')){
+        $user =$this->Users->patchEntity($user,$this->request->getData());
+        
+        if($this->Users->save($user)){
+            $this->getMailer('user')->send('registration',[$user]);
+        }
+    }
+    $this->set('user',$user);
+}
+
+public function verify($token)
+{
+    $user= $this->Users->get(Token::getId($token));
+    if(!$user->tokenVerify($token)){
+        throw new NotFoundException();
+    }
+     // ユーザーステータスを本登録にする。(statusカラムを本登録に更新する)
+    $this->Users->activate($user);
     
+    $this->Flash->success('認証完了しました。ログインしてください。');
+    return $this->redirect(['action'=>'login']);
+
+}    
 public function login()
 {
 	if($this->request->is('post')){
@@ -105,6 +134,10 @@ public function login()
                 ->subject('仮登録')
                 ->send('ありがとうございます。こちらからご登録ください。');      
                  if ($this->Users->save($user)) {
+                     
+                     
+                   /* $this->getMailer('User')->send('registration', [$user]);
+                    exit();*/
                     $this->Flash->success(__('ご登録ありがとうございます。'));
                     return $this->redirect(['controller' => 'ranking','action' => 'index']);
                   };
