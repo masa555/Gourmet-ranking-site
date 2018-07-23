@@ -10,16 +10,16 @@ use App\Controller\AppController;
  *
  * @method \App\Model\Entity\Comment[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
-class InformationController extends AppController
+class ContactController extends AppController
 {  
     public function index()
     {
-        $this->set(compact('information'));
+        $this->set(compact('Contact'));
     }
-      public function initialize()
-    {
-        parent::initialize();
-        $this->Auth->allow(['information','index']);
-    }
-    
+     public function initialize()
+{
+    parent::initialize();
+    // 許可アクションリストに 'add' アクションを追加
+    $this->Auth->allow(['contact', 'index']);
+}
 }

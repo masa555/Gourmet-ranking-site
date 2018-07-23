@@ -16,4 +16,11 @@ class PrivacypolicyController extends AppController
     {
         $this->set(compact('privacypolicy'));
     }
+    
+     public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['privacypolicy','index']);
+    }
+    
 }

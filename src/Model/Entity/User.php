@@ -2,7 +2,6 @@
 namespace App\Model\Entity;
 use Cake\Auth\DefaultPasswordHasher;
 use Cake\ORM\Entity;
-use Token\Model\Entity\TokenTrait;
 
 /**
  * User Entity
@@ -15,9 +14,7 @@ use Token\Model\Entity\TokenTrait;
  */
  
 class User extends Entity
-{   /*tokenTrait読み込み*/ 
-    use TokenTrait;
-    /**
+{   /**
      * Fields that can be mass assigned using newEntity() or patchEntity().
      *
      * Note that when '*' is set to true, this allows all unspecified fields to

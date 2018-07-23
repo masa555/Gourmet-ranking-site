@@ -43,7 +43,9 @@ class AppController extends Controller
     'Navbar' => ['className' => 'Bootstrap.BootstrapNavbar'],
     'Panel' => ['className' => 'Bootstrap.BootstrapPanel'],
     'Paginator' => ['className' => 'Bootstrap.BootstrapPaginator'],
+
 ];
+ 
     /**
      * Initialization hook method.
      *
@@ -58,9 +60,11 @@ class AppController extends Controller
         parent::initialize();
 
         $this->loadComponent('Flash');
+
         
        $this->loadComponent('Auth',[
       'authorize' => 'Controller',
+      'authError' => 'ログインしてください。',
 	  'authenticate' => [
 		'Form' => [
 			'fields' => [
@@ -72,8 +76,13 @@ class AppController extends Controller
 	'loginAction' => [
 		'controller' => 'Users',
 		'action' => 'login'
-	]
-
+	],
+	//ログイン後のリダイレクト先
+	'loginRedirect'=>[
+	    'controller'=>'Ranking',
+	    'action'=>'index'
+	],
+	
 ]);
 
         /*
@@ -83,7 +92,7 @@ class AppController extends Controller
         //$this->loadComponent('Csrf');
 
     }
-   
+    
 }
 
  

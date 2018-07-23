@@ -26,7 +26,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     </title>
     <?= $this->Html->meta('icon') ?>
 
-    <!-- <?= $this->Html->css('cake.css') ?> -->
+    <?php echo $this->Html->css('style') ?>   
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -52,7 +52,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="/.">
+			<a class="navbar-brand">
 		    <img alt="北関東グルメランキング" src="/webroot/img/北関東.jpg">
 			</a>
 		</div>
@@ -62,13 +62,15 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
             <li role="presentation"><?= $this->Html->link(__('北関東グルメとは'), ['controller' => 'information', 'action' =>'index']) ?></li>
            <li role="presentation"><?= $this->Html->link(__('観光一覧'), ['controller' => 'spots', 'action' => 'index'])?></li>
            <li role="presentation"><?= $this->Html->link(__('コメント投稿'), ['controller' => 'comments', 'action' => 'add']) ?></li>
-           <li role="presentation"><?= $this->Html->link(__('ログアウト'), ['controller'=>'users','action' =>'logout']) ?></li>	
+           	<li role="presentation"><?php if($this->request->session()->read('Auth.User.id')):?>
+			<a href="/users/logout">ログアウト</a></li>
+          　<?php endif;?>
 			</ul>
+
 		</div>
 	</div>
 	</nav>
-	
-    
+	<?= $this->Flash->render() ?>
     <!--<nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
@@ -83,9 +85,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </nav>
     -->
-     <div class="container">
-    <?= $this->Flash->render() ?>
+     <div class="container" style="margin-top:60px;">
+         
     <div class="container clearfix">
+        
+    </div>
         <?= $this->fetch('content') ?>
     </div>
     </div>
@@ -93,16 +97,18 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <footer>
       <div class="center-filud"> 
       <div class="text-center">
-     <div class="footer-menu">
+      <div class="footer-menu">
          <nav>
                   <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
                   <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
+                  <li><?=$this->Html->link(_('お問い合わせ'),['controller'=>'contact','action'=>'index'])?></li>
          </nav>
+           </div> 
          </div>
+          
         <div class="copyright">
-             <small>copyrights.@北関東グルメAll rights reserved.</small>
+             <small>@2018北関東グルメAll Rights reserved.</small>
         </div> 
     </footer>
-     </div> 
 </body>
 </html>

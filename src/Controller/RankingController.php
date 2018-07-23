@@ -13,6 +13,7 @@ class RankingController extends AppController
       $this->Food= TableRegistry::get('foods');
       $this->Comment= TableRegistry::get('comments');
       $this->loadComponent('Paginator');
+    
     }
     
    public function index()

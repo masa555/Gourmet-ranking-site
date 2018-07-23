@@ -36,8 +36,9 @@
 	<br>
 	<br>
 	<br>
-      <?=$this->Html->img($spot->imgURL,
+      <?=$this->Html->image($spot->imgURL,
                      array('width'=>'500','height'=>'266', ['alt' => '北関東']))?></td>
+        
       <div class="row">
         <h1><span class="label label-info"><?=('おすすめ!!スポット') ?></span></h1>
         <!--画像-->

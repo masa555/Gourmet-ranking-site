@@ -62,7 +62,7 @@ class CommentsController extends AppController
                 return $this->redirect(['controller'=>'foods','action'=>'view', $comment['food_id']]);
                 //return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('追加できません、もう一度お願いします'));
+            $this->Flash->error(__('追加できませんでした、再度入力してください。'));
         }
         $foods = $this->Comments->Foods->find('list', ['limit' => 200]);
         $this->set(compact('comment', 'foods'));
@@ -76,7 +76,7 @@ class CommentsController extends AppController
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
     public function edit($id = null)
-    {
+    { 
         $comment = $this->Comments->get($id, [
             'contain' => []
         ]);
@@ -87,7 +87,7 @@ class CommentsController extends AppController
                 /*こちらのリダイレクト先編集や削除などしたらfood viewの食べ物内容ページに戻したい*/
                 return $this->redirect(['controller'=>'foods','action'=>'view', $comment['food_id']]);
             }
-            $this->Flash->error(__('すいません　コメントを編集できません、もう一度お願いします'));
+            $this->Flash->error(__('すいません　コメントを編集できません、再度入力してください、'));
         }
         $foods = $this->Comments->Foods->find('list', ['limit' => 200]);
         $this->set(compact('comment', 'foods'));
@@ -101,15 +101,16 @@ class CommentsController extends AppController
      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
      */
     public function delete($id = null)
-    {
+    {  
         $this->request->allowMethod(['post', 'delete']);
         $comment = $this->Comments->get($id);
         if ($this->Comments->delete($comment)) {
             $this->Flash->success(__('削除しました。'));
         } else {
-            $this->Flash->error(__('削除できません。再度試してください'));
+            $this->Flash->error(__('削除できませんでした、再度入力してください。'));
         }
 
         return $this->redirect(['controller'=>'foods','action'=>'view', $comment['food_id']]);
     }
+     
 }

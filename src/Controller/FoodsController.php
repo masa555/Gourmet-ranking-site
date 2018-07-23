@@ -62,7 +62,7 @@ class FoodsController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The food could not be saved. Please, try again.'));
+            $this->Flash->error(__('保存できませんでした、再度入力してください。'));
         }
         $this->set(compact('food'));
     }
@@ -86,7 +86,7 @@ class FoodsController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The food could not be saved. Please, try again.'));
+            $this->Flash->error(__('保存できませんでした、再度入力してください。'));
         }
         $this->set(compact('food'));
     }
@@ -103,12 +103,16 @@ class FoodsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $food = $this->Foods->get($id);
         if ($this->Foods->delete($food)) {
-            $this->Flash->success(__('The food has been deleted.'));
+            $this->Flash->success(__('削除しました。'));
         } else {
-            $this->Flash->error(__('The food could not be deleted. Please, try again.'));
+            $this->Flash->error(__('削除できませんでした、再度入力してください。'));
         }
 
         return $this->redirect(['action' => 'index']);
     }
-    
+     public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['foods','view']);
+    }
 }

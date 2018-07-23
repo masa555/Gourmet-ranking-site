@@ -62,7 +62,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * 
      */
     //$routes->connect('/', array('controller' => 'Users', 'action' =>'Users'));
-   $routes->connect('/', ['controller' => 'ranking', 'action' => 'index']);
+   $routes->connect('/', ['controller' => 'Ranking', 'action' => 'index']);
 
     /**
      * Connect catchall routes for all controllers.

@@ -2,7 +2,7 @@
 namespace App\Controller;
 use Cake\Mailer\Email;
 use App\Controller\AppController;
-use Cake\Mailer\MailerAwareTrait;
+
 /**
  * Users Controller
  *
@@ -11,58 +11,35 @@ use Cake\Mailer\MailerAwareTrait;
  * @method \App\Model\Entity\User[]|\Cake\Datasource\ResultSetInterface paginate($object = null, array $settings = [])
  */
  
-class UsersController extends AppController
-{
-    use MailerAwareTrait;
- /*新規登録の処理をするメソッド作成*/   
-public function ragistration()
-{
-    $user =$this->Users->newEntity();
-    if($this->request->is('post')){
-        $user =$this->Users->patchEntity($user,$this->request->getData());
-        
-        if($this->Users->save($user)){
-            $this->getMailer('user')->send('registration',[$user]);
-        }
-    }
-    $this->set('user',$user);
-}
+class UsersController extends AppController{
 
-public function verify($token)
-{
-    $user= $this->Users->get(Token::getId($token));
-    if(!$user->tokenVerify($token)){
-        throw new NotFoundException();
-    }
-     // ユーザーステータスを本登録にする。(statusカラムを本登録に更新する)
-    $this->Users->activate($user);
-    
-    $this->Flash->success('認証完了しました。ログインしてください。');
-    return $this->redirect(['action'=>'login']);
-
-}    
 public function login()
-{
-	if($this->request->is('post')){
+{   
+   if($this->request->is('post')){
 		$user = $this->Auth->identify();
-		
 		//print_r($this->request);
 		if($user){
 			$this->Auth->setUser($user);
+			$this->Auth->user('id');
+			$this->request->session()->delete('http://cake-php-code-masa55.c9users.io/ranking');
 			return $this->redirect($this->Auth->redirectUrl('http://cake-php-code-masa55.c9users.io/ranking'));
 		}
-		$this->Flash->error('ユーザー名かパスワードが間違ってます');
+		$this->Flash->error('メールアドレスを入力してください、パスワードを入力してください。');
 	}
   }
  
   public function beforeFilter(\Cake\Event\Event $event) {
 	parent::beforeFilter($event);
+	
+
 	$this->Auth->allow(['add']);
+
   }
+  
     public function logout()
   {
 	$this->Flash->success('ログアウトしました');
-	return $this->redirect($this->Auth->logout('http://cake-php-code-masa55.c9users.io/my_app_name/login'));
+	return $this->redirect($this->Auth->logout());
  }
 
     /**
@@ -74,17 +51,10 @@ public function login()
     { 
         
         $users = $this->paginate($this->Users);
-
         $this->set(compact('users'));
-        
-        print_r("okok<br><br><br><br><br><br><br><br>ok");
-         $email = new Email('default');
-        $email->from(['tyutyumasato@gmail.com' => '運営だよ'])
-              ->to('sales@fieroj.com')
-              ->subject('タイトル')
-              ->send('本文テスト！');
-    }
     
+    }
+   
     /**
      * View method
      *
@@ -126,9 +96,16 @@ public function login()
                    $this->set(compact('user'));
                    $this->render('confirm');
                }else{
+                  
+                 if ($this->Users->save($user)) {
+                   return $this->redirect(['controller' => 'Thanks','action' => 'index']);
+                   
+                  };
+                 
+                  
                     //新規の場合ユーザーデータ登録
                     /*メール設定*/
-                   $email = new Email('default');
+                  /* $email = new Email('default');
                  $email->from(['tyutyumasato@gmail.com' => 'kitakantou'])
                  ->to('sukilup2058@gmail.com')
                 ->subject('仮登録')
@@ -136,17 +113,17 @@ public function login()
                  if ($this->Users->save($user)) {
                      
                      
-                   /* $this->getMailer('User')->send('registration', [$user]);
-                    exit();*/
+                   $this->getMailer('User')->send('registration', [$user]);
+                    exit();
                     $this->Flash->success(__('ご登録ありがとうございます。'));
                     return $this->redirect(['controller' => 'ranking','action' => 'index']);
-                  };
+                  };*/
                }
                
              }else{
                 //echo"パスワードが一致してないよ";
                 //$this->return->Flash->error->message(__('パスワードが一致しません再度入力してください'));
-                $this->Flash->error(__('パスワードが一致しません再度入力してください'));
+                $this->Flash->error(__('パスワードが一致しませんでした、再度入力してください'));
              }
              
             //$this->Flash->error(__('ユーザー登録に失敗しました　再度入力してください'));
@@ -174,7 +151,7 @@ public function login()
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('ユーザー登録し失敗しました'));
+            $this->Flash->error(__('ユーザー登録し失敗しました、再度入力してください。'));
         }
         $this->set(compact('user'));
     }
@@ -194,7 +171,7 @@ public function delete($id = null)
         if ($this->Users->delete($user)) {
             $this->Flash->success(__('削除しました。'));
         } else {
-            $this->Flash->error(__('削除できません'));
+            $this->Flash->error(__('削除できません、再度入力してください。'));
         }
 
         return $this->redirect(['action' => 'index']);
@@ -204,5 +181,6 @@ public function delete($id = null)
         parent::initialize();
         $this->Auth->allow(['logout','add']);
     }
+    
 }
 

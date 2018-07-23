@@ -16,4 +16,10 @@ class UserpolicyController extends AppController
     {
         $this->set(compact('userpolicy'));
     }
+     public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['userpolicy','index']);
+    }
+    
 }

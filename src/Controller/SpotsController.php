@@ -56,7 +56,7 @@ class SpotsController extends AppController
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The spot could not be saved. Please, try again.'));
+            $this->Flash->error(__('保存できませんでした。再度入力してください。'));
         }
         $this->set(compact('spot'));
     }
@@ -76,11 +76,11 @@ class SpotsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $spot = $this->Spots->patchEntity($spot, $this->request->getData());
             if ($this->Spots->save($spot)) {
-                $this->Flash->success(__('The spot has been saved.'));
+                $this->Flash->success(__('保存しました'));
 
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The spot could not be saved. Please, try again.'));
+            $this->Flash->error(__('保存できませんでした。再度入力してください。。'));
         }
         $this->set(compact('spot'));
     }
@@ -97,11 +97,17 @@ class SpotsController extends AppController
         $this->request->allowMethod(['post', 'delete']);
         $spot = $this->Spots->get($id);
         if ($this->Spots->delete($spot)) {
-            $this->Flash->success(__('The spot has been deleted.'));
+            $this->Flash->success(__('削除しました。'));
         } else {
-            $this->Flash->error(__('The spot could not be deleted. Please, try again.'));
+            $this->Flash->error(__('削除できませんでした、再度入力してください。'));
         }
 
         return $this->redirect(['action' => 'index']);
+    }
+     public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['spots','index']);
+        $this->Auth->allow(['spots','view']);
     }
 }

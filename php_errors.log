@@ -680,3 +680,44 @@ Stack trace:
 [26-Jun-2018 10:58:08 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
 [26-Jun-2018 11:19:36 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
 [30-Jun-2018 20:09:07 Asia/Tokyo] PHP Fatal error:  Trait 'Token\Model\Entity\TokenTrait' not found in /home/ubuntu/workspace/my_app_name/src/Model/Entity/User.php on line 19
+[03-Jul-2018 15:47:45 Asia/Tokyo] PHP Fatal error:  [ParseError] syntax error, unexpected ''Auth'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 /home/ubuntu/workspace/my_app_name/src/Controller/ErrorController.php(24): spl_autoload_call('App\\Controller\\...')
+#3 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(444): include('/home/ubuntu/wo...')
+#4 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#6 [internal function]: spl_autoload_call('App\\Controller\\...')
+#7 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#8 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(64): Cak in /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Error/ErrorHandler.php on line 181
+[03-Jul-2018 15:48:07 Asia/Tokyo] PHP Fatal error:  [ParseError] syntax error, unexpected '=>' (T_DOUBLE_ARROW)
+#0 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 /home/ubuntu/workspace/my_app_name/src/Controller/ErrorController.php(24): spl_autoload_call('App\\Controller\\...')
+#3 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(444): include('/home/ubuntu/wo...')
+#4 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#6 [internal function]: spl_autoload_call('App\\Controller\\...')
+#7 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#8 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase( in /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Error/ErrorHandler.php on line 181
+[03-Jul-2018 15:48:49 Asia/Tokyo] PHP Fatal error:  [ParseError] syntax error, unexpected ''authError'' (T_CONSTANT_ENCAPSED_STRING), expecting ']'
+#0 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 /home/ubuntu/workspace/my_app_name/src/Controller/ErrorController.php(24): spl_autoload_call('App\\Controller\\...')
+#3 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(444): include('/home/ubuntu/wo...')
+#4 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#6 [internal function]: spl_autoload_call('App\\Controller\\...')
+#7 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#8 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(64) in /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Error/ErrorHandler.php on line 181
+[13-Jul-2018 13:31:03 Asia/Tokyo] PHP Fatal error:  Cannot redeclare App\Controller\RankingController::initialize() in /home/ubuntu/workspace/my_app_name/src/Controller/RankingController.php on line 38
+[13-Jul-2018 14:38:01 Asia/Tokyo] PHP Fatal error:  [ParseError] syntax error, unexpected ']'
+#0 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#1 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#2 /home/ubuntu/workspace/my_app_name/src/Controller/ErrorController.php(24): spl_autoload_call('App\\Controller\\...')
+#3 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(444): include('/home/ubuntu/wo...')
+#4 /home/ubuntu/workspace/my_app_name/vendor/composer/ClassLoader.php(322): Composer\Autoload\includeFile('/home/ubuntu/wo...')
+#5 [internal function]: Composer\Autoload\ClassLoader->loadClass('App\\Controller\\...')
+#6 [internal function]: spl_autoload_call('App\\Controller\\...')
+#7 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(152): class_exists('App\\Controller\\...')
+#8 /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Core/App.php(64): Cake\Core\App::_classExistsInBase('\\Controller\\Err in /home/ubuntu/workspace/my_app_name/vendor/cakephp/cakephp/src/Error/ErrorHandler.php on line 181
