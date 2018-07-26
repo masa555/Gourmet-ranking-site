@@ -230,9 +230,9 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'befe6e738e591a',
-            'password' => 'cba83d71',
-            'database' => 'heroku_4ae1a2476f55738',
+            'username' => 'b9e3727d7b9b3d',
+            'password' => '9235986a',
+            'database' => 'heroku_f5151cdc409a39e',
             'encoding' => 'utf8',
             'timezone' => '+09:00',
             'flags' => [],
