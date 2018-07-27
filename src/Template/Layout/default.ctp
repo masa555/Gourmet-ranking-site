@@ -13,7 +13,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = '北関東グルメランキング';
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +24,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $cakeDescription ?>:
        <?= $this->fetch('title') ?>
     </title>
-    <?= $this->Html->meta('icon') ?>
+    <?= $this->Html->meta('icon'); ?>
 
     <?php echo $this->Html->css('style') ?>   
     
@@ -104,7 +104,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
          <nav>
                   <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
                   <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-                  <li><?=$this->Html->link(_('お問い合わせ'),['controller'=>'Contact','action'=>'index'])?></li>
+                  <li><?=$this->Html->link(_('お問い合わせ'),['controller'=>'contact','action'=>'index'])?></li>
          </nav>
            </div> 
          </div>
