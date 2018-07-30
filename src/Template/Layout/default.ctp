@@ -104,7 +104,7 @@ $cakeDescription = '北関東グルメランキング';
          <nav>
                   <li><?= $this->Html->link(__('利用規約'), ['controller' => 'userpolicy', 'action' =>'index']) ?></li>
                   <li><?= $this->Html->link(__('プライバシーポリシー'), ['controller' => 'privacypolicy', 'action' =>'index']) ?></li>
-                  <li><?=$this->Html->link(_('お問い合わせ'),['controller'=>'contact','action'=>'index'])?></li>
+                  <li><?=$this->Html->link(__('お問い合わせ'),['controller'=>'contact','action'=>'index'])?></li>
          </nav>
            </div> 
          </div>
