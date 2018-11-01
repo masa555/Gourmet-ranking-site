@@ -62,7 +62,7 @@ $cakeDescription = '北関東グルメランキング';
             <li role="presentation"><?= $this->Html->link(__('北関東グルメとは'), ['controller' => 'information', 'action' =>'index']) ?></li>
            <li role="presentation"><?= $this->Html->link(__('観光一覧'), ['controller' => 'spots', 'action' => 'index'])?></li>
            <li role="presentation"><?= $this->Html->link(__('コメント投稿'), ['controller' => 'comments', 'action' => 'add']) ?></li>
-           	<li role="presentation"><?php if($this->request->session()->read('Auth.User.id')):
+           	<li role="presentation"><?php if($this->request->getsession()->read('Auth.User.id')):
            	?>
 			<a href="/users/logout">ログアウト</a></li>
 			
