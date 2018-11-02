@@ -231,7 +231,7 @@ return [
              */
             //'port' => 'non_standard_port_number',
             'username' => 'b16c500becd6eb',
-            'password' => '9ca391d1',
+            'password' => 'bc4cf38a4e5d6c2',
             'database' => 'heroku_8faac1cba9f7339',
             'encoding' => 'utf8',
             'timezone' => '+09:00',
