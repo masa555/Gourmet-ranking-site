@@ -3,9 +3,6 @@
     <ul class="side-nav">
     </ul>
 </nav>
- <br>
- <br>
- <br>
 <div class="container-filud">
     <h1><span class="label label-warning"><?= __('観光スポット一覧表') ?></span></h1>
 <div class="form-group form-group-lg">
@@ -28,9 +25,8 @@
     <?php endforeach; ?>
         </tbody>
     </table>
-    <div class="container-fluid">
     <div class="paginator">
-         <nav>
+          <nav>
         <ul class="pagination pagination-sm">
             <?= $this->Paginator->first('<< ' . __('最初')) ?>
             <?= $this->Paginator->prev('< ' . __('前に')) ?>
@@ -42,6 +38,4 @@
       </div>
      </div>
     </div>
- </div>
- </div>
  
