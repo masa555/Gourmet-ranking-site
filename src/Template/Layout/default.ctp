@@ -60,7 +60,7 @@ $cakeDescription = '北関東グルメランキング';
 	</div>
 	</nav>
 	<?= $this->Flash->render() ?>
-    <?=$this->fetch('title') ?>
+    
      <div class="container" style="margin-top:60px;">
          
     <div class="container clearfix">
