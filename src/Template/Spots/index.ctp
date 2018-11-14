@@ -21,6 +21,8 @@
              <?php foreach ($spots as $spot): ?>
             <tr>
                  <h2><?= $this->Html->link($spot['name'], ['controller'=>'Spots','action' => 'view', $spot->id]) ?></h2>
+                 <?= $this->Html->link($spot['name'], ['controller'=>'Spots','action' => 'edit', $spot->id]) ?>
+                 
         
             </tr>
     <?php endforeach; ?>
