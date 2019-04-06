@@ -22,3 +22,5 @@ https://www.kitakantou.online
 CakePHP3 
 ## CSS
 bootstrap3
+##インフラ
+heroku
