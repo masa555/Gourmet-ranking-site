@@ -23,5 +23,7 @@ googleマップ検索機能<br>
 CakePHP3 
 ## CSS
 bootstrap3
+##JavaScrpt
+Jquery googlemapAPI
 ## インフラ
 heroku
