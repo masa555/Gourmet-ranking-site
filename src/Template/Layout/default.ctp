@@ -17,15 +17,17 @@ $cakeDescription = '北関東グルメランキング';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
-     
+    
     <!-- jquery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-
+   
     <!-- bootstrap framework -->
      <?= $this->Html->script('//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'); ?>
      <?= $this->Html->css('//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css') ?>
-     
+     <?= $this->Html->script('//maps.google.com/maps/api/js?key=AIzaSyBqNxM_b001SSoPqo0765iu4LRpdIZhyyc'); ?>
+ 
+
 </head>
 <!--メニュー -->
 <body>
@@ -39,7 +41,7 @@ $cakeDescription = '北関東グルメランキング';
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand">
-		    <img alt="北関東グルメランキング" src="/webroot/img/北関東.jpg">
+		    <img src="/img/北関東.jpg"alt="北関東グルメランキング">
 			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbarEexample8">

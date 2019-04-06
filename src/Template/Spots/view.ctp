@@ -29,4 +29,15 @@
             </div>
            </div>
           </div>
-         
+          
+     <p>住所や駅名、目印などで検索できます。</p>
+  <form onsubmit="return false;">
+  <input type="text" value="例:群馬県" id="address">
+  <button type="button" value="検索" id="map_button">検索</button>
+</form>
+<!-- 地図を表示させる要素 -->
+<div class="map_box01"><div id="map-canvas" style="width: 500px;height: 350px;"></div></div>
+　　<?php  echo $this->Html->script('googlemap'); ?>
+  <p>地図上をクリックするとマーカーを移動できます。</p>
+ 
+ 
