@@ -14,7 +14,7 @@ class InformationController extends AppController
 {  
     public function index()
     {
-        $this->set(compact('information'));
+       
     }
       public function initialize()
     {
