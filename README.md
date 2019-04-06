@@ -17,6 +17,7 @@ https://www.kitakantou.online
 コメント機能<br>
 記事投稿機能<br>
 ランキング機能<br>
+googleマップ検索機能<br>
 # 使用している技術
 ## バックエンド
 CakePHP3 
