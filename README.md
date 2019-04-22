@@ -17,6 +17,8 @@ https://www.kitakantou.online
 コメント機能<br>
 記事投稿機能<br>
 ランキング機能<br>
+
+# 追加機能
 googleマップ検索機能<br>
 # 使用している技術
 ## バックエンド
