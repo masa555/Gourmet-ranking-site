@@ -20,19 +20,7 @@
   <span class="label label-info"><?= __('店舗情報!!') ?> </span>
 </h2>
 <h4><?= $this->Text->autoParagraph(h($food->text)); ?></h4>
-<p>住所や駅名、目印などで検索できます。</p>　　
-<form onsubmit="return false;">　　 
-  <input type="text" value="みやこ食堂" id="address">　 
-  <button type="button" value="検索" id="map_button">検索</button>　　
-</form>
-<!-- 地図を表示させる要素 -->
-<div class="map_box01">
-<div id="map-canvas" style="width: 500px;height: 350px;">
-</div>
-</div>　　 
-<?php  echo $this->Html->script('googlemap'); ?>
-<p>地図上をクリックするとマーカーを移動できます。</p>
-</div>
+
 <div class="related">
 <!--coments-->　 
 <div class="row">
