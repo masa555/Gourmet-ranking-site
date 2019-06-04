@@ -13,7 +13,7 @@
     <?php foreach ($scores as $score):
     ?>      
  <div class="row">
-  <div class="col-xs-12 col-md-12">
+  <div class="col-sm-6 col-md-3">
     <h2>
       <?php
         if($rank==1){
@@ -50,7 +50,6 @@
       <br>
     </div>
   </div>
-  
   <!--ループ文終了-->
   </div>
   <hr>

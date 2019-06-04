@@ -58,7 +58,7 @@ class FoodsController extends AppController
         if ($this->request->is('post')) {
             $food = $this->Foods->patchEntity($food, $this->request->getData());
             if ($this->Foods->save($food)) {
-                $this->Flash->success(__('The food has been saved.'));
+                $this->Flash->success(__('食べ物を保存しました。'));
 
                 return $this->redirect(['action' => 'index']);
             }
@@ -82,7 +82,7 @@ class FoodsController extends AppController
         if ($this->request->is(['patch', 'post', 'put'])) {
             $food = $this->Foods->patchEntity($food, $this->request->getData());
             if ($this->Foods->save($food)) {
-                $this->Flash->success(__('The food has been saved.'));
+                $this->Flash->success(__('食べ物を保存しました。'));
 
                 return $this->redirect(['action' => 'index']);
             }

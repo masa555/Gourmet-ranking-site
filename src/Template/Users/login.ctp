@@ -1,5 +1,4 @@
 　<?php echo $this->Html->css('style') ?>   
-    <?= $this->Flash->render() ?> 
 	<br>
 	<br>
 	<br>

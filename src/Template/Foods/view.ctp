@@ -20,7 +20,6 @@
   <span class="label label-info"><?= __('店舗情報!!') ?> </span>
 </h2>
 <h4><?= $this->Text->autoParagraph(h($food->text)); ?></h4>
-
 <div class="related">
 <!--coments-->　 
 <div class="row">

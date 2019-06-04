@@ -52,7 +52,7 @@ class SpotsController extends AppController
         if ($this->request->is('post')) {
             $spot = $this->Spots->patchEntity($spot, $this->request->getData());
             if ($this->Spots->save($spot)) {
-                $this->Flash->success(__('The spot has been saved.'));
+                $this->Flash->success(__('スポットを保存しました。'));
 
                 return $this->redirect(['action' => 'index']);
             }

@@ -98,6 +98,7 @@ public function login()
                }else{
                   
                  if ($this->Users->save($user)) {
+                   $this->Flash->success('登録しました');
                    return $this->redirect(['controller' => 'Thanks','action' => 'index']);
                    
                   };
@@ -128,7 +129,7 @@ public function login()
              
             //$this->Flash->error(__('ユーザー登録に失敗しました　再度入力してください'));
         }
-        
+    
          $this->set(compact('user'));
     }
     
