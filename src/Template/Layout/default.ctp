@@ -31,7 +31,7 @@ $cakeDescription = '北関東グルメランキング';
 </head>
 <!--メニュー -->
 <body>
-     <nav class="navbar navbar-default navbar-fixed-top">
+     <nav class="navbar navbar-inverse navbar-fixed-top ">
        <div class="container-fluid">
 		<div class="navbar-header">
 			<button type="button" class="navbar-toggle collapsed"data-toggle="collapse"data-target="#navbarEexample8">
@@ -41,7 +41,7 @@ $cakeDescription = '北関東グルメランキング';
 				<span class="icon-bar"></span>
 			</button>
 			<a class="navbar-brand">
-		    <img src="/img/北関東.jpg"alt="北関東グルメランキング">
+		    <h4 class="title">北関東グルメランキング</h4>
 			</a>
 		</div>
 		<div class="collapse navbar-collapse" id="navbarEexample8">
