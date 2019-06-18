@@ -1,9 +1,9 @@
 # 北関東グルメランキング
 ## デモサイト
-メールアドレス:
+メールアドレス:<br>
 test@gmail.com<br>
 パスワード:
-root
+root<br>
 https://www.kitakantou.online
 # はじめに
 あまり知られていない群馬県の魅力をもっと多くの人に知ってもらうために作成しました。<br>
