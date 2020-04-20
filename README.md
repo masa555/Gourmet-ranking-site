@@ -4,7 +4,7 @@
 test@gmail.com<br>
 パスワード:
 root<br>
-https://www.kitakantou.online
+ http://www.kitakantou.online
 # はじめに
 あまり知られていない群馬県の魅力をもっと多くの人に知ってもらうために作成しました。<br>
 ただ群馬県だけだと寂しいので他の北関東の県も含めてB級グルメやB級観光スポットなどを紹介するページを作りました。
